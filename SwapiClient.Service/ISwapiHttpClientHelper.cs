@@ -9,6 +9,6 @@ namespace SwapiClient.Application
 {
     public interface ISwapiHttpClientHelper
     {
-        ValueTask<SwapiPeopleResponse> GetPeople(int pageNo);
+        Task<SwapiPeopleResponse> GetPeople(int pageNo);
     }
 }

@@ -1,6 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MediatR;
+using Microsoft.Extensions.Logging;
 using StarWarsApiCSharp;
 using SwapiClient.Application;
+using SwapiClient.Application.Query;
 using SwapiClient.Domain;
 
 namespace SwapiClient.Infrastructure
@@ -8,11 +10,11 @@ namespace SwapiClient.Infrastructure
     public class SwapiWrapper: ISwapiWrapper
     {
         //private readonly IRepository<Person> _personRepo;
-        private readonly ISwapiHttpClientHelper _swapiHttpClientHelper;
+        private readonly IMediator _mediatr;
         private readonly ILogger<SwapiWrapper> _logger;
-        public SwapiWrapper(ISwapiHttpClientHelper swapiHttpClientHelper, ILogger<SwapiWrapper> logger)
+        public SwapiWrapper(IMediator mediatr, ILogger<SwapiWrapper> logger)
         {
-            _swapiHttpClientHelper = swapiHttpClientHelper;
+            _mediatr = mediatr;
             _logger = logger;
         }
 
@@ -94,8 +96,8 @@ namespace SwapiClient.Infrastructure
 
         public ICollection<SwapiPeople> GetPersons(int pageNo = 1)
         {
-            var peopleTask = _swapiHttpClientHelper.GetPeople(pageNo);
-            Task.WaitAll(peopleTask.AsTask());
+            var peopleTask = _mediatr.Send(new GetPeopleQuery { PageNo = pageNo });
+            Task.WaitAll(peopleTask);
 
             return peopleTask.Result.Results;
 

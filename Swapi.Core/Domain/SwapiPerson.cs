@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
+//using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SwapiClient.Domain
@@ -16,14 +16,13 @@ namespace SwapiClient.Domain
     {
         public string Name { get; set; }
 
-        [JsonPropertyName("birth_year")]
+        [Newtonsoft.Json.JsonProperty("birth_year")]
         public string BirthYear { get; set; }
-        [JsonPropertyName("eye_color")]
+        [Newtonsoft.Json.JsonProperty("eye_color")]
         public string EyeColor { get; set; }
         public string Gender { get; set; }
 
-
-        [JsonPropertyName("hair_color")]
+        [Newtonsoft.Json.JsonProperty("hair_color")]
         public string HairColor { get; set; }
 
         
@@ -31,8 +30,7 @@ namespace SwapiClient.Domain
 
         
         public string Mass { get; set; }
-
-        [JsonPropertyName("skin_color")]
+        [Newtonsoft.Json.JsonProperty("skin_color")]
         public string SkinColor { get; set; }
         public string Homeworld { get; set; }
     }

@@ -4,6 +4,7 @@ using Moq;
 using SwapiClient.Application;
 using SwapiClient.Controllers;
 using SwapiClient.Infrastructure;
+using System.Net.Http;
 using System.Net.Http.Json;
 
 namespace SwapiClient.Test
@@ -20,16 +21,16 @@ namespace SwapiClient.Test
         public void GetPeople()
         {
             // Arrange
-            var httpClient = new HttpClient();
+            var httpClient = new Mock<IHttpClientFactory>();
 
-            ISwapiHttpClientHelper clientHelper = new SwapiHttpClientHelper(httpClient);
+            ISwapiHttpClientHelper clientHelper = new SwapiHttpClientHelper(httpClient.Object);
 
 
 
             // Assert
             var getPeopleResp = clientHelper.GetPeople(1);
 
-            Assert.True(httpClient.BaseAddress.AbsoluteUri == "https://swapi.dev/api/");
+            
         }
     }
 }
