@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Api", "SwapiClient\SwapiClient.Api.csproj", "{47B7955B-DE9F-495A-BE12-88F0DD4017F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Api", "SwapiClient.Api\SwapiClient.Api.csproj", "{47B7955B-DE9F-495A-BE12-88F0DD4017F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Application", "SwapiClient.Service\SwapiClient.Application.csproj", "{2EEC95F3-D2ED-450F-8096-BCB581C4BE3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Application", "SwapiClient.Application\SwapiClient.Application.csproj", "{2EEC95F3-D2ED-450F-8096-BCB581C4BE3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Domain", "Swapi.Core\SwapiClient.Domain.csproj", "{EFCFC5D7-2743-4D10-BD85-A7B990EB6569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Domain", "SwapiClient.Domain\SwapiClient.Domain.csproj", "{EFCFC5D7-2743-4D10-BD85-A7B990EB6569}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapiClient.Test", "SwapiClient.Test\SwapiClient.Test.csproj", "{46898B88-C011-4467-B3BA-136057853866}"
 EndProject

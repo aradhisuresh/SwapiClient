@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Swapi.Core\SwapiClient.Domain.csproj" />
-    <ProjectReference Include="..\SwapiClient\SwapiClient.Api.csproj" />
+    <ProjectReference Include="..\SwapiClient.Domain\SwapiClient.Domain.csproj" />
+    <ProjectReference Include="..\SwapiClient.Api\SwapiClient.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
